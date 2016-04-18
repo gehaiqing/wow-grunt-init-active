@@ -1,0 +1,10 @@
+{
+	"tpl_path":"audio_1/",
+	"section" :"audio",
+	"relate_files" : ["./theme/index.js","./theme/common/common.less"],
+	"components":{
+		"audio":{
+		  	"path":"audio/audio_1/1.0/"
+		}
+	}
+}

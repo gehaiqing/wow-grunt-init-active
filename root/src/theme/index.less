@@ -1,0 +1,175 @@
+html,
+body {
+    width: 640px;
+    height: 100%;
+    overflow: hidden;
+    margin: 0 auto;
+    position: relative;
+    background-color: black;
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+}
+
+@media (min-width: 768px) {
+    body {
+        // zoom:0.5;
+    }
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-family: "微软雅黑";
+    user-select: none;
+    -webkit-user-selcet: none;
+    z-index: 1;
+}
+
+@imgUrl: 'images';
+@textcolor : #931d22;
+@import "less/wbase.less";
+@import "less/first.less";
+@import "less/main.less";
+@import "less/share.less";
+@import "less/loading.less";
+@import "less/award.less";
+@import "less/pc.less";
+.hongbao {
+    display: none;
+    z-index: 2;
+    ._br-p(510px, 788px, 130px, 162px, "@{imgUrl}/hongbao.png");
+    .hongbao_close {
+        ._br-p(auto, -10px, 40px, 40px, "@{imgUrl}/hongbao_close.png");
+        background-size: contain;
+        // background-color: black;
+        right: 10px;
+        z-index: 2;
+    }
+    @delay: .3s;
+    @fn : cubic-bezier(0.68, -0.55, 0, 1.01);
+    .hongbao1 {
+        ._br-position(50px, 50px, "@{imgUrl}/hongbao1.png");
+        ._br-keyframes(hongbao1-ani);
+        .-frames(@-...) {
+            0% {
+                ._br-transform(translateX(-20px) translateY(0px));
+                opacity: 0;
+            }
+            100% {
+                ._br-transform(translateX(-50px) translateY(-50px));
+            }
+        }
+        ._br-animation(hongbao1-ani 2s infinite @fn);
+    }
+    .hongbao2 {
+        ._br-position(50px, 50px, "@{imgUrl}/hongbao2.png");
+        ._br-keyframes(hongbao2-ani);
+        .-frames(@-...) {
+            0% {
+                ._br-transform(translateX(-10px) translateY(0px));
+                opacity: 0;
+            }
+            100% {
+                ._br-transform(translateX(-30px) translateY(-60px) rotate(-30deg));
+            }
+        }
+        ._br-animation(hongbao2-ani 2s+@delay*1 infinite @fn);
+    }
+    .hongbao3 {
+        ._br-position(50px, 50px, "@{imgUrl}/hongbao3.png");
+        ._br-keyframes(hongbao3-ani);
+        .-frames(@-...) {
+            0% {
+                ._br-transform(translateX(0px) translateY(0px));
+                opacity: 0;
+            }
+            100% {
+                ._br-transform(translateX(0px) translateY(-70px));
+            }
+        }
+        ._br-animation(hongbao3-ani 2s+@delay*2 infinite @fn);
+    }
+    .hongbao4 {
+        ._br-position(50px, 50px, "@{imgUrl}/hongbao4.png");
+        ._br-keyframes(hongbao4-ani);
+        .-frames(@-...) {
+            0% {
+                ._br-transform(translateX(10px) translateY(0px));
+                opacity: 0;
+            }
+            100% {
+                ._br-transform(translateX(30px) translateY(-60px));
+            }
+        }
+        ._br-animation(hongbao4-ani 2s+@delay*3 infinite @fn);
+    }
+    .hongbao5 {
+        ._br-position(50px, 50px, "@{imgUrl}/hongbao5.png");
+        ._br-keyframes(hongbao5-ani);
+        .-frames(@-...) {
+            0% {
+                ._br-transform(translateX(20px) translateY(0px));
+                opacity: 0;
+            }
+            100% {
+                ._br-transform(translateX(50px) translateY(-50px));
+            }
+        }
+        ._br-animation(hongbao5-ani 2s+@delay*4 infinite @fn);
+    }
+}
+
+.top_hongbao {
+    z-index: 2;
+    display: none;
+    ._br-p(0, 0, 100%, 100%);
+    .top_hongbao_bg {
+        ._br-p(0, 0, 100%, 100%);
+        background-color: rgba(0, 0, 0, 0.6);
+    }
+    .top_hongbao_big {
+        ._br-position(0, 0, "@{imgUrl}/top_hongbao.png");
+        &.ani_hide {
+            ._br-keyframes(top_hongbao_big-ani);
+            .-frames(@-...) {
+                0% {
+                    ._br-transform(translateY(0px));
+                }
+                100% {
+                    ._br-transform(translateY(-100%));
+                }
+            }
+            ._br-animation(top_hongbao_big-ani 2s forwards);
+        }
+        &.ani_show{
+            ._br-keyframes(top_hongbao_big_show-ani);
+            .-frames(@-...) {
+                0% {
+                    ._br-transform(translateY(-100%));
+                }
+                100% {
+                    ._br-transform(translateY(0));
+                }
+            }
+            ._br-animation(top_hongbao_big_show-ani 2s forwards);
+        }
+    }
+    .top_hongbao_small {
+        display: none;
+        ._br-position(0, 0, "@{imgUrl}/top_hongbao_small.png");
+    }
+    .get_hongbao {
+        ._br-p(231px, 97px, 183px, 179px);
+    }
+    .tejia {
+        ._br-p(133px, 441px, 376px, 103px);
+    }
+    .push {
+        ._br-p(0, auto, 100%, 47px);
+        bottom: 10px;
+    }
+}

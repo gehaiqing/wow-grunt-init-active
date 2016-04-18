@@ -1,0 +1,110 @@
+/**
+ * 声音元件
+ * -u-audio
+ */
+.u-audio {
+  position: absolute;
+  top: 130px;
+  right: 0;
+  width: 132px;
+  height: 73px;
+  z-index: 200;
+}
+.u-audio .res_audio {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  height: 0;
+  width: 0;
+}
+.u-audio .btn_audio {
+  width: 100%;
+  height: 60px;
+  text-align: right;
+  position: absolute;
+  right: 5px;
+}
+.u-audio .btn_audio strong,
+.u-audio .btn_audio .audio_open {
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  line-height: 60px;
+  vertical-align: middle;
+}
+.u-audio .btn_audio strong {
+  width: 57px;
+  font-size: 24px;
+  color: #fff;
+  opacity: 1;
+}
+.u-audio .btn_audio strong.z-hide {
+  opacity: 0;
+}
+.u-audio .btn_audio strong.z-move {
+  -webkit-transition: opacity 0.5s;
+  -moz-transition: opacity 0.5s;
+  -ms-transition: opacity 0.5s;
+  -o-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+}
+.u-audio.z-low {
+  z-index: 1;
+}
+.audio_open {
+  background-image: url("common/audio_1/images/stop.png");
+  width: 60px;
+  height: 60px;
+}
+.audio_play {
+  animation: audio_play1 2s linear infinite;
+  -o-animation: audio_play1 2s linear infinite;
+  -webkit-animation: audio_play1 2s linear infinite;
+  -moz-animation: audio_play1 2s linear infinite;
+}
+@-webkit-keyframes audio_play1 {
+  0% {
+    background-image: url("common/audio_1/images/p1.png");
+  }
+  33% {
+    background-image: url("common/audio_1/images/p2.png");
+  }
+  66% {
+    background-image: url("common/audio_1/images/p3.png");
+  }
+  100% {
+    background-image: url("common/audio_1/images/p4.png");
+  }
+}
+@-moz-keyframes audio_play1 {
+  0% {
+    background-image: url("common/audio_1/images/p1.png");
+  }
+  33% {
+    background-image: url("common/audio_1/images/p2.png");
+  }
+  66% {
+    background-image: url("common/audio_1/images/p3.png");
+  }
+  100% {
+    background-image: url("common/audio_1/images/p4.png");
+  }
+}
+@keyframes audio_play1 {
+  0% {
+    background-image: url("common/audio_1/images/p1.png");
+  }
+  33% {
+    background-image: url("common/audio_1/images/p2.png");
+  }
+  66% {
+    background-image: url("common/audio_1/images/p3.png");
+  }
+  100% {
+    background-image: url("common/audio_1/images/p4.png");
+  }
+}
+.audio_stop {
+  background-image: url("common/audio_1/images/stop.png");
+}
